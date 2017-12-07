@@ -1,0 +1,66 @@
+﻿@model Project2.Models.Services
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Services</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cityFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cityFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cityTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cityTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timeDeparture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timeDeparture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.timeArrival)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.timeArrival)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

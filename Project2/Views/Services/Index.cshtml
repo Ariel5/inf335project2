@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Project2.Models.Services>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.cityFrom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.cityTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timeDeparture)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.timeArrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.cityFrom)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.cityTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timeDeparture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.timeArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>
