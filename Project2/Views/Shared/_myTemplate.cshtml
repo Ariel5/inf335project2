@@ -1,16 +1,9 @@
-﻿
-@{
-    ViewBag.Title = "_myTemplate";
-}
+﻿<!DOCTYPE html>
 
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="">
- <!--<![endif]-->
+<html>
 <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Host Two Template</title>
@@ -19,21 +12,21 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!--<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,600,700' rel='stylesheet' type='text/css'>-->
-    <link rel="stylesheet" href="assets/css/fonticons.css">
-    <link rel="stylesheet" href="assets/fonts/stylesheet.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/fonticons.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/bootstrap.min.css">
     <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
     <!--For Plugins external css-->
-    <link rel="stylesheet" href="assets/css/plugins.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/plugins.css" />
 
     <!--Theme custom css -->
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/style.css">
 
     <!--Theme Responsive css-->
-    <link rel="stylesheet" href="assets/css/responsive.css" />
+    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/responsive.css" />
 
-    <script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <script src="@Url.Content("~/Content/myTemplate/")assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
 <body>
     <header id="main_menu" class="header navbar-fixed-top">
@@ -96,7 +89,7 @@
 
                                     <ul class="nav navbar-nav navbar-right">
                                         <li><a href="#home">Home</a></li>
-                                        <li><a href="#abouts">About</a></li>
+                                        <li>@Html.ActionLink("Services", "Index", "Services")</li>
                                         <li><a href="#feature">Features</a></li>
                                         <li><a href="#clients">Clients</a></li>
                                         <li><a href="#pricing">Domain</a></li>
@@ -114,15 +107,8 @@
 
         </div>
     </header> <!--End of header -->
-
-    <footer id="footer" class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="main_footer text-center">
-                    <p>Made with <i class="fa fa-heart"></i> by <a href="http://bootstrapthemes.co">Bootstrap Themes</a>2016. All Rights Reserved</p>
-                </div>
-            </div>
-        </div>
-    </footer><!-- End of footer section -->
+    <div>
+        @RenderBody()
+    </div>
 </body>
 </html>
