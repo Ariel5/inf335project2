@@ -504,9 +504,9 @@ input:-ms-input-placeholder {
     transition: .6s;
     display:none;
 }
-.main_menu_bg{
+.main_menu_bg {
     margin-top: 0px;
-    background-color: #fff;
+    background-color: #202242;
 }
 .main_menu_bg .navbar-default {
     background-color: transparent; 
@@ -517,8 +517,8 @@ input:-ms-input-placeholder {
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
     color:#e84c3d;
 }
-.main_menu_bg .navbar {
-    margin-bottom:10px;
+.navbar-default .navbar-nav>li>a{
+    color:#fff;
 }
 
 .main_menu_bg .navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus{
@@ -600,7 +600,7 @@ header_top_bar{
 
 /* Home Section */
 .home{
-    background: url(../images/homebg.jpg) no-repeat center left;
+    background: url(../images/train.jpg) no-repeat center left;
     background-size:cover;
 }
 .home_overlay{

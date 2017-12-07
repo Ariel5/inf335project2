@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/fonticons.css">
     <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/fonts/stylesheet.css">
     <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/font-awesome.min.css">
-    <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="@Url.Content("~/Content/")/bootstrap.min.css">
     <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
     <!--For Plugins external css-->
     <link rel="stylesheet" href="@Url.Content("~/Content/myTemplate/")assets/css/plugins.css" />
@@ -35,28 +35,7 @@
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="nav">
-                            <div class="call_us_menu">
-
-                                <div class="col-sm-8 col-xs-12">
-                                    <p>Do you need help ? Just Email, Live chat or Call us</p>
-                                </div>
-                                <div class="col-sm-4 col-xs-5">
-                                    <div class="call_us_bottom">
-                                        <div class="row">
-                                            <div class="col-sm-6 col-xs-6 no-padding">
-                                                <div class="btn_left">
-                                                    <a href="" class="btn-primary">Live Chat</a>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-6 col-xs-6">
-                                                <div class="phone_numbr">
-                                                    <a href="">6284-6534</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    
                         </div>
                     </div>
                 </div>
@@ -88,12 +67,11 @@
                                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                                     <ul class="nav navbar-nav navbar-right">
-                                        <li><a href="#home">Home</a></li>
+                                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
                                         <li>@Html.ActionLink("Services", "Index", "Services")</li>
-                                        <li><a href="#feature">Features</a></li>
-                                        <li><a href="#clients">Clients</a></li>
-                                        <li><a href="#pricing">Domain</a></li>
-                                        <li><a href="#contact">Hosting</a></li>
+                                        <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                                        <li>@Html.ActionLink("Login", "Login", "Account")</li>
+                                        <li>@Html.ActionLink("Register", "Register", "Account")</li>
 
                                     </ul>
                                 </div>

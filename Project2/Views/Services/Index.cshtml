@@ -2,6 +2,7 @@
 
 @{
     ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_myTemplate.cshtml";
 }
 
 <h2>Index</h2>
@@ -9,55 +10,56 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
+<table style="margin-top:100px" class="table table-striped">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.cityFrom)
+            City Departure
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cityTo)
+            City Arrival
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.timeDeparture)
+            Time of Departure
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.timeArrival)
+            Time of Arrival
+        </th>   
+        <th>
+            Price
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.price)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.description)
+            Description
         </th>
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.cityFrom)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.cityTo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timeDeparture)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.timeArrival)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.price)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.cityFrom)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cityTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timeDeparture)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.timeArrival)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.description)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+            </td>
+        </tr>
+    }
 
 </table>
